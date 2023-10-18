@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+    <link rel="stylesheet" href="index.css"></head>
+    
+    
+<body>
+    
+    <div id="pg2">
+        <form>
+            <label>Name</label>
+          <input type="text" placeholder="enter your name" name="rname" required><br>
+          <label>Ph.no</label>
+          <input type="number" placeholder="enter your number"  name="rnumber" required><br>
+          <label>Email</label>
+          <input type="email" placeholder="enter your email"  name="remail" required><br>
+          <label>Password</label>
+          <input type="password" placeholder="password"  name="rpassword" required class="pwd"><br>
+          <label>Confirm Password</label>
+          <input type="password" placeholder="confirm password"  name="rcpassword" required class="cpwd"><br>
+          <button class="q" onclick="checkPass()">Submit</button>
+          <button class="a" ><a href="index.html" onclick="checkPass()">Sign in</a></button>
+
+        </form>
+    </div>
+    <script type="text/javascript">
+        
+        var a=document.querySelector(".pwd").value;
+        var b=document.querySelector(".cpwd").value;
+        function checkPass(event){
+                if(a=!b){
+       event.preventDefault();
+        alert("Pasword and Confirm Password not Matched");
+        return false;
+              }
+}
+
+       </script>
+  
+    
+</body>
+</html>
